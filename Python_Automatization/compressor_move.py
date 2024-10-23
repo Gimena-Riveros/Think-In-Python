@@ -1,9 +1,9 @@
-from PIL import Image # python3 -m pip install Pillow
+from PIL import Image # python3 -m pip install Pillow    or   python -m pip install Pillow
 
 import os
 
-downloadsFolder = "/Users/gimen/Documents/"     #   from
-picturesFolder = "/Users/gimen/Documents/"      #   to
+downloadsFolder = "/Users/userName/Download/"     #   from
+picturesFolder = "/Users/userName/Pictures/"      #   to
 
 if __name__ == "__main__":
     for filename in os.listdir(downloadsFolder):
@@ -13,4 +13,4 @@ if __name__ == "__main__":
             picture = Image.open(downloadsFolder + filename)
             picture.save(picturesFolder + "compressed_"+filename, optimize=True, quality=60)
             os.remove(downloadsFolder + filename)
-            print(name + ": " + extension)
+            # print(name + ": " + extension)
